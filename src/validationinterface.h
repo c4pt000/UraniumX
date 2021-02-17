@@ -21,6 +21,9 @@ class CValidationState;
 class uint256;
 class CScheduler;
 
+#include <boost/bind/bind.hpp>
+using namespace boost::placeholders;
+
 // These functions dispatch to one or all registered wallets
 
 /** Register a wallet to receive updates from core */
