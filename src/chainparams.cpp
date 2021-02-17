@@ -139,7 +139,6 @@ public:
 
         vFixedSeeds = std::vector<SeedSpec6>(pnSeed6_main, pnSeed6_main + ARRAYLEN(pnSeed6_main));
         vSeeds.clear();
-        vSeeds.emplace_back ("node.uranium-x.com", false);
 
         fDefaultConsistencyChecks = false;
         fRequireStandard = true;
