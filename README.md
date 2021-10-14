@@ -2,6 +2,7 @@
 <br>
 <br>
 <br>
+# https://github.com/c4pt-tmp/UraniumX-current-sync/releases
 <br>
 <br>
 <br>
