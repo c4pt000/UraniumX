@@ -1,8 +1,10 @@
 
-<br>
-<br>
-<br>
+
 # https://github.com/c4pt-tmp/UraniumX-current-sync/releases
+
+# todo android wallet
+# todo electrum-wallet
+# todo paper-wallet integration
 <br>
 <br>
 <br>
