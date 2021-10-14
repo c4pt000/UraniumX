@@ -1,7 +1,172 @@
+from radiocoin readme.md
+
+```
+# RADIOACTIVE !!
+
+http://radioblockchain.info/ext/getmoneysupply
+<br>
+http://radioblockchain.info/ext/getdistribution
+
+```
+100 Billion starting total supply (dogecoin started with 5 billion total network supply)
+100,000,000,000 starting supply of radiocoin blockchain network
+68,000,000,000 (68 Billion left) 09-30-2021
+```
+
+# **ignore previous suggestions to use -j24 (even if a person doesnt have 24 cores in their system DO NOT USE THIS it can fill up the available amount of free memory with garbage and break the current compile, even though this does not make sense while using the make command and specifying 24 cores with -j24 you would think the compiler would only select all 8 cores and ignore everything after that since the system only has 4 cores or 8 cores when -j24 is specified.
+
+# I notice that it creates an unseen memory problem when building code on systems with less than 8gb of RAM since it will use up all available memory on a system for unknown reasons
+
+* 09-29-2021 update about previous android version (back in releases to restore first time wallets)
+
+# see releases
+```
+Android send to send fixed with QR (store version works with android to android and desktop with camera QR codes)
+
+fix-free version from releases only works with desktop QR codes but does not send from android to android (see store version)
+
+store version does not restore wallets made with fix-free version
+```
+
+<br>
+for RADIOCOIN-electrum https://github.com/c4pt000/electrum-radiocoin
+<br>
+for DOGECOIN-electrum https://github.com/c4pt000/electrum-dogecoin
+<br>
+
+* requires 4GB of memory to build
+
+# fedora 34  (requires port 8333 outbound in the firewall, ufw allow out 8333)
+
+```
+yum groupinstall "C Development Tools and Libraries" -y
+
+wget https://raw.githubusercontent.com/rpmsphere/x86_64/master/c/checkinstall-1.6.2-1.x86_64.rpm
+yum install checkinstall-1.6.2-1.x86_64.rpm -y
+
+
+yum install git-core libdb-cxx-devel libdb-cxx openssl-devel 
+libevent-devel cppzmq-devel qrencode-devel qt5-qtbase-devel.x86_64 
+protobuf-devel boost-* boost-devel miniupnpc-devel.x86_64 
+diffutils qt-devel qt4-devel wget qt5-lin* alien dpkg -y
+
+cd /root
+
+ wget https://github.com/c4pt000/radiocoin/releases/download/bootstrap-DATADIR-block-117682/radiocoin-snapshot-CURRENT.tar.gz
+ tar -xvf radiocoin-snapshot-CURRENT.tar.gz 
+ cd /opt
+ git clone https://github.com/c4pt000/radiocoin
+ cd radiocoin/
+ cp -rf radiocoin.conf /root/.radiocoin/radiocoin.conf
+ sh autogen.sh
+ ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
+
+make -j4 (or number of cores for -j)
+
+then either checkinstall here for deb package (then alien script for rpms)
+
+checkinstall --install=no --exclude=/sys/fs/selinux
+alien --scripts --to-rpm (the-debian-package.here.deb)
+
+then make -j4 install for local install to /usr
+
+radiocoind -reindex
+or 
+radiocoin-qt -reindex
+
+followed by radiocoin-cli stop
+radiocoind
+
+or radiocoin-cli stop
+radiocoin-qt
+```
+
+# debian 10 (requires port 8333 outbound in the firewall, ufw allow out 8333)
+```
+ cd /root/
+ wget https://github.com/c4pt000/radiocoin/releases/download/bootstrap-DATADIR-block-117682/radiocoin-snapshot-CURRENT.tar.gz
+ tar -xvf radiocoin-snapshot-CURRENT.tar.gz 
+ apt install aptitude
+ cd /opt
+ git clone https://github.com/c4pt000/radiocoin
+ cd radiocoin/
+ sh build-debian-deps.sh 
+ cp -rf radiocoin.conf /root/.radiocoin/radiocoin.conf 
+ sh autogen.sh 
+ ./configure --with-incompatible-bdb --prefix=/usr --enable-sse2
+ 
+ make -j4 (or number of cores for -j)
+
+     then either checkinstall here for deb package (then alien script for rpms)
+ 
+ checkinstall --install=no --exclude=/sys/fs/selinux
+ alien --scripts --to-rpm (the-debian-package.here.deb)
+
+     then make -j4 install for local install to /usr
+     
+     radiocoind -reindex
+     or 
+     radiocoin-qt -reindex
+     
+     followed by radiocoin-cli stop
+     radiocoind
+
+     or radiocoin-cli stop
+     radiocoin-qt
+```
+
+# Android
+
+# paid version $1.00 (support my work to help with server costs, beer and cigarettes, living needs, more crypto development)
+
+https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet
+``
+<img src="https://raw.githubusercontent.com/c4pt000/radiocoin/master/Screenshot_20210926-082345-228.png" alt="https://play.google.com/store/apps/details?id=org.apache.cordova.radiocoin.wallet" width="450"/>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 UraniumX integration/staging tree
 ==================================
 
-What is Uranium-X?
+What is UraniumX?
 --------------------
 UraniumX is a P2P digital asset that enables instant transfers to anyone, anywhere 
 in the world.  UraniumX uses peer-to-peer technology to operate with no central 
@@ -11,48 +176,17 @@ the use of this coin.
 
 Blockchain
 ----------
-- **Type** Proof-of-Work (PoW) mining
-- **Max Supply**: 235,000 URX
-- **Current Block Reward**: 0.25 URX, halving every few years
-- **Block Time**: ~5 Minutes
-- **Emission length**: ~70 years
-- **First block** 1-APR-2018
-
-Halving Table, URX Emissions
-----------
-nHeight --> Rewards
-----------
-
-1 - 23499 --> 1.0 URX
-23500 - 46999 --> 0.5 URX
-47000 - 57649 --> 0.25 URX
-57650--> replacement funds 2118.25 (CVE bug, see Whitepaper)
-57651 - 257239 --> 0.25 URX
-257240 - 467479 --> 0.125 URX
-467480 - 677719 --> 0.06250 URX
-677720 - 887959 -->  0.03125 URX
-...etc...
-//Force block reward to zero when right shift is undefined.
-    if (nHeight >= 7364760)
-//Subsidy is cut in half every 23500 URX in the first phase, and then every 210240 blocks
+- **Max Money**: 235,000 URX
+- **Block Reward**: 1 URX
+- **Target Timespan**: 7 Days
+- **Block Time**: 5 Minutes
 
 Proof of Work
 -------------
-- **PoW Algorithm**: blocks 0-105000 was Argon2ad. After block 106500: modified yespowerurx (cpu-friendly, gpu-unfriendly)
+- **PoW Algorithm**: Argon2d: memory usage increases over time.
 - **Difficulty**: Uses Dark Gravity Wave and updates every block.
 
 License
 -------
 UraniumX is released under the terms of the MIT license. See 
 [COPYING](COPYING) for more information or see https://opensource.org/licenses/MIT.
-
-Websites
--------
-block explorer: scan.urx.zone
-
-main site: urx.zone
-
-Community/Help
--------
-https://discord.gg/xFxtY78
-

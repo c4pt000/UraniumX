@@ -1,0 +1,1 @@
+docker run --net host -it -d -v /opt/uraniumx-tmp:/opt/uraniumx-tmp -e "DISPLAY=${DISPLAY:-:0.0}" -v /tmp/.X11-unix:/tmp/.X11-unix c4pt/uraniumx
