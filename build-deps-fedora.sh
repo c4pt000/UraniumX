@@ -1,3 +1,4 @@
+yum update 
 yum groupinstall "C Development Tools and Libraries" -y
 
 wget https://raw.githubusercontent.com/rpmsphere/x86_64/master/c/checkinstall-1.6.2-1.x86_64.rpm 
