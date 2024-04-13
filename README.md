@@ -1,5 +1,5 @@
 
-UraniumX staging tree 24.x
+UraniumX staging tree 2.0.0.x
 ===========================
 
 * for releases for macos + windows + linux
@@ -75,13 +75,13 @@ cd UraniumX
 
 ./autogen.sh
 
-./configure --prefix=$PWD/bitnet-macos-shared --disable-tests --disable-bench \
+./configure --prefix=$PWD/uraniumx-macos-shared --disable-tests --disable-bench \
  --disable-fuzz-binary
 
 make -j8 				        # -j8 for 8 cores adjust here
 make -j8 install 		        # -j8 for 8 cores adjust here
 
-file will be in UraniumX/bitnet-macos-shared
+
 ```
 
 
