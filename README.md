@@ -1,5 +1,5 @@
 
-bitnet-io staging tree 24.x
+UraniumX staging tree 24.x
 ===========================
 
 * for releases for macos + windows + linux
